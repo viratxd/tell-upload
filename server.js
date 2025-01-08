@@ -20,7 +20,7 @@ app.post("/upload", multipartMiddleware, async (req, res, next) => {
 
   filereader.addEventListener("load", function (ev) {
     bot.telegram
-      .sendPhoto(1436937738, Input.fromBuffer(filereader.result))
+      .sendPhoto(5173085859, Input.fromBuffer(filereader.result))
       .then((data) => {
         res.send({ link: `${process.env.HOST}/${data.photo.slice(-1)[0].file_id}` });
       });
